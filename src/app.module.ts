@@ -7,7 +7,7 @@ import { User, UserSchema } from './schems/user-data.schema';
 
 @Module({
   imports: [
-    ConfigModule.forRoot({ envFilePath: '.env.local' }),
+    ConfigModule.forRoot({ envFilePath: '.env' }),
     MongooseModule.forRoot(process.env.MONGO_URI),
     MongooseModule.forFeature([{ name: User.name, schema: UserSchema }]),
   ],
